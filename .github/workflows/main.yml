@@ -1,14 +1,19 @@
-name: Powershell
+name: os
 on: [push, pull_request]
 
 jobs:
 
   test:
-    name: Multiple
-    
+    name: copy
     runs-on: [self-hosted]
+
     steps:
-      - uses: actions/checkout@v3
-      - name: create
-        run: .\c.ps1
-        shell: powershell
+      - uses: actions/checkout@v1
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.11
+      - name: setup java
+        run: |
+              javac os.java
+              java os
