@@ -26,7 +26,7 @@ jobs:
 
     - name: Test with pytest
       run: |
-             python os.py
+             os.py
 
 
 
