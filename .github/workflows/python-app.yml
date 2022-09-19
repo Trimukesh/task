@@ -20,5 +20,6 @@ jobs:
     - name: Test with pytest
       run: |
           python os.py
+          shell: python
 
 
